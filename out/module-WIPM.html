@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: WIPM</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Module: WIPM</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~Predict_b%E1%BA%B1ng_model_ANFIS"><span class="type-signature">(inner) </span>Predict_bằng_model_ANFIS<span class="signature">(model_type, data)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array_of_double_array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/anfis/predict</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+Số hàng trong data bắt buộc là 6</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line242">line 242</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_type" : "DecisionTree", 
+	"data" : {
+		"0" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"1" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"2" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"3" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"4" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"5" : {
+			"0" : 1, 
+			"1" : 2
+		}
+	}
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~Predict_b%E1%BA%B1ng_model_h%E1%BB%93i_quy"><span class="type-signature">(inner) </span>Predict_bằng_model_hồi_quy<span class="signature">(model_id, data)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array_of_double_array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/regression/predict</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line74">line 74</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_id" : "preg", 
+	"data" : {
+		"0" : {
+			"0" : 1.2, 
+			"1" : 2.3, 
+			"2" : 3
+ }, 
+		"1" : {
+			"0" : 2.6, 
+			"1" : 0.7, 
+			"2" : 1.3
+		}
+	}
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~Predict_b%E1%BA%B1ng_model_ph%C3%A2n_lo%E1%BA%A1i"><span class="type-signature">(inner) </span>Predict_bằng_model_phân_loại<span class="signature">(model_id, data)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array_of_double_array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/classification/predict</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line137">line 137</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_id" : "pclf", 
+	"data" : {
+		"0" : {
+			"0" : 1.2, 
+			"1" : 2.3, 
+			"2" : 3
+ }, 
+		"1" : {
+			"0" : 2.6, 
+			"1" : 0.7, 
+			"2" : 1.3
+		}
+	}
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~Predict_b%E1%BA%B1ng_ph%C6%B0%C6%A1ng_ph%C3%A1p_crp"><span class="type-signature">(inner) </span>Predict_bằng_phương_pháp_crp<span class="signature">(model_id, data)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array_of_double_array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/crp/predict</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line203">line 203</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_id" : "pcrp", 
+	"data" : {
+		"0" : {
+			"0" : 2.1, 
+			"1" : 2.5, 
+			"2" : 3.1
+ }, 
+		"1" : {
+			"0" : 5.3, 
+			"1" : 0.1, 
+			"2" : 2.3
+		}
+	}
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~T%E1%BA%A1o_model_b%E1%BA%B1ng_ph%C6%B0%C6%A1ng_ph%C3%A1p_crp"><span class="type-signature">(inner) </span>Tạo_model_bằng_phương_pháp_crp<span class="signature">(model_id, model_type, params, train)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>model_type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>train</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/crp/model</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_id" : "crp", 
+	"params" : {
+		"dim" : 1, 
+		"tau" : 2
+ }, 
+	"train" : {
+		"well" : {
+			"0" : "well1", 
+			"1" : "well2", 
+			"2" : "well3"
+ }, 
+		"data" : {
+			"0" : {
+				"0" : 2.1, 
+				"1" : 2.5, 
+				"2" : 3.1
+ }, 
+			"1" : {
+				"0" : 5.3, 
+				"1" : 0.1, 
+				"2" : 2.3
+ }
+ }, 
+		"target" : {
+			"0" : 1, 
+			"1" : 0, 
+			"2" : 1
+		}
+	}
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~T%E1%BA%A1o_model_h%E1%BB%93i_quy"><span class="type-signature">(inner) </span>Tạo_model_hồi_quy<span class="signature">(model_id, model_type, params, train)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>model_type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>train</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/regression/model</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+Với neural network thay vì trả về loss sẽ trả về object error_path gồm 2 mảng validation_errors và train_error</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line50">line 50</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_id" : "reg", 
+	"model_type" : "NeuralNetwork", 
+	"params" : {
+		"hidden_layer_sizes" : {
+			"0" : 10, 
+			"1" : 10, 
+			"2" : 10
+ }, 
+		"solver" : "lbfgs", 
+		"max_iter" : 1000
+ }, 
+	"train" : {
+		"data" : {
+			"0" : {
+				"0" : 1.2, 
+				"1" : 2.3, 
+				"2" : 3
+ }, 
+			"1" : {
+				"0" : 2.6, 
+				"1" : 0.7, 
+				"2" : 1.3
+ }
+ }, 
+		"target" : {
+			"0" : 1.5, 
+			"1" : 0.7, 
+			"2" : 3.6
+		}
+	}
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~T%E1%BA%A1o_model_ph%C3%A2n_lo%E1%BA%A1i"><span class="type-signature">(inner) </span>Tạo_model_phân_loại<span class="signature">(model_id, model_type, params, train)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>model_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>model_type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>train</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li>Method: POST</li>
+        
+            <li>Route: /wipm/classification/model</li>
+        
+            <li>Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+Với neural network thay vì trả về loss sẽ trả về object error_path gồm 2 mảng validation_errors và train_error</li>
+        
+    </ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="WIPM.js.html">WIPM.js</a>, <a href="WIPM.js.html#line113">line 113</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>{
+	"model_id" : "clf", 
+	"model_type" : "KNN", 
+	"params" : {
+		"num_neighbors" : 20, 
+		"p" : 1
+ }, 
+	"train" : {
+		"data" : {
+			"0" : {
+				"0" : 1.2, 
+				"1" : 2.3, 
+				"2" : 3
+ }, 
+			"1" : {
+				"0" : 2.6, 
+				"1" : 0.7, 
+				"2" : 1.3
+ }
+ }, 
+		"target" : {
+			"0" : 1, 
+			"1" : 0, 
+			"2" : 0
+		}
+	}
+}</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-API%2520Authenticate.html">API Authenticate</a></li><li><a href="module-API%2520Communication.html">API Communication</a></li><li><a href="module-API%2520SOM.html">API SOM</a></li><li><a href="module-wi-online.html">wi-online</a></li><li><a href="module-WIPM.html">WIPM</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 12 2018 17:15:10 GMT+0700 (SE Asia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

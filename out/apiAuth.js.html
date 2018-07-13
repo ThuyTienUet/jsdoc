@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: apiAuth.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: apiAuth.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview Module
+ */
+/**
+ * @module API Authenticate
+ */
+/**
+ * @param {String} username
+ * @param {String} password
+ * @param {String} fullname
+ * @param {String} email
+ * @param {String} captcha
+ * @implements Method: POST
+ * @implements Route: /register
+ * @example undefined
+ */
+function Register(username, password, fullname, email, captcha) {}
+/**
+ * @param {String} username
+ * @param {String} password
+ * @implements Method: POST
+ * @implements Route: /login
+ * @implements Note: Content là jwt token sẽ hết hạn trong sau 24h, mọi request đến main service đều yêu cầu kèm token này, nếu không main service sẽ response 401 not authenticate.
+jwt token có thể thêm vào request header (Authorization: token), hoặc body (token: token) với post method hoặc (/link?token=token) với get method. Hiện tại đang dùng với cách 1.
+ * @example undefined
+ */
+function Login(username, password) {}
+/**
+ * @param {String} refresh_token
+ * @implements Method: POST
+ * @implements Route: /refresh-token
+ * @implements Note: 
+ * @example undefined
+ */
+function refresh_token(refresh_token) {}
+/**
+ * @param {} name
+ * @param {} description
+ * @param {String} location
+ * @implements Method: POST
+ * @implements Route: /company/new
+ * @implements Note: 
+ * @example undefined
+ */
+function create_company(name, description, location) {}
+/**
+ * @param {} idCompany
+ * @implements Method: POST
+ * @implements Route: /company/info
+ * @implements Note: 
+ * @example undefined
+ */
+function info_company(idCompany) {}
+/**
+ * @param {} idCompany
+ * @implements Method: POST
+ * @implements Route: /company/delete
+ * @implements Note: 
+ * @example undefined
+ */
+function delete_company(idCompany) {}
+/**
+ * @param {} name
+ * @param {} description
+ * @param {String} location
+ * @param {} idCompany
+ * @implements Method: POST
+ * @implements Route: /company/edit
+ * @implements Note: 
+ * @example undefined
+ */
+function edit_company(name, description, location, idCompany) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /company/list
+ * @implements Note: 
+ * @example undefined
+ */
+function list_company() {}
+/**
+ * @param {} name
+ * @param {} description
+ * @param {} idCompany
+ * @implements Method: POST
+ * @implements Route: /group/new
+ * @implements Note: 
+ * @example undefined
+ */
+function create_group(name, description, idCompany) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /group/list
+ * @implements Note: 
+ * @example undefined
+ */
+function list_group() {}
+/**
+ * @param {} idGroup
+ * @implements Method: POST
+ * @implements Route: /group/delete
+ * @implements Note: 
+ * @example undefined
+ */
+function delete_group(idGroup) {}
+/**
+ * @param {} idGroup
+ * @param {} idUser
+ * @implements Method: POST
+ * @implements Route: /group/add-user
+ * @implements Note: 
+ * @example undefined
+ */
+function add_user_to_group(idGroup, idUser) {}
+/**
+ * @param {} idGroup
+ * @param {} idUser
+ * @implements Method: POST
+ * @implements Route: /group/remove-user
+ * @implements Note: 
+ * @example undefined
+ */
+function remove_user_from_group(idGroup, idUser) {}
+/**
+ * @param {} project_name
+ * @param {} idGroup
+ * @implements Method: POST
+ * @implements Route: /group/project-permission
+ * @implements Note: 
+ * @example undefined
+ */
+function get_project_permission_of_group(project_name, idGroup) {}
+/**
+ * @param {} project_name
+ * @param {} idGroup
+ * @implements Method: POST
+ * @implements Route: /group/update-project-permission
+ * @implements Note: 
+ * @example undefined
+ */
+function update_project_permission_for_group(project_name, idGroup) {}
+/**
+ * @param {} project_name
+ * @implements Method: POST
+ * @implements Route: /shared-project/new
+ * @implements Note: 
+ * @example undefined
+ */
+function new_shared_project(project_name) {}
+/**
+ * @param {} username
+ * @implements Method: POST
+ * @implements Route: /shared-project/list
+ * @implements Note: 
+ * @example undefined
+ */
+function list_shared_project(username) {}
+/**
+ * @param {} type
+ * @param {} idSharedProject
+ * @param {} idGroup
+ * @implements Method: POST
+ * @implements Route: /shared-project/add-to-group
+ * @implements Note: type = add or remove
+ * @example undefined
+ */
+function add_shared_project_to_group(type, idSharedProject, idGroup) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/list
+ * @implements Note: 
+ * @example undefined
+ */
+function list_user() {}
+/**
+ * @param {} username
+ * @param {} password
+ * @param {} status
+ * @param {number} role
+ * @param {} email
+ * @param {} fullname
+ * @implements Method: POST
+ * @implements Route: /user/new
+ * @implements Note: 
+ * @example undefined
+ */
+function new_user(username, password, status, role, email, fullname) {}
+/**
+ * @param {} idUser
+ * @implements Method: POST
+ * @implements Route: /user/info
+ * @implements Note: 
+ * @example undefined
+ */
+function info_user(idUser) {}
+/**
+ * @param {} username
+ * @param {} password
+ * @param {} status
+ * @param {number} role
+ * @param {} email
+ * @param {} fullname
+ * @implements Method: POST
+ * @implements Route: /user/edit
+ * @implements Note: 
+ * @example undefined
+ */
+function edit_user(username, password, status, role, email, fullname) {}
+/**
+ * @param {} idUser
+ * @implements Method: POST
+ * @implements Route: /user/delete
+ * @implements Note: 
+ * @example undefined
+ */
+function delete_user(idUser) {}
+/**
+ * @param {} isUser
+ * @param {} status
+ * @implements Method: POST
+ * @implements Route: /user/change-status
+ * @implements Note: 
+ * @example undefined
+ */
+function change_user_status(isUser, status) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/dropDb
+ * @implements Note: 
+ * @example undefined
+ */
+function drop_user_database() {}
+/**
+ * @param {} username
+ * @param {} project_name
+ * @implements Method: POST
+ * @implements Route: /user/get-permission
+ * @implements Note: 
+ * @example undefined
+ */
+function get_user_permission(username, project_name) {}
+/**
+ * @param {} idUser
+ * @implements Method: POST
+ * @implements Route: /user/force-log-out
+ * @implements Note: 
+ * @example undefined
+ */
+function force_user_logout(idUser) {}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-API%2520Authenticate.html">API Authenticate</a></li><li><a href="module-API%2520Communication.html">API Communication</a></li><li><a href="module-API%2520SOM.html">API SOM</a></li><li><a href="module-wi-online.html">wi-online</a></li><li><a href="module-WIPM.html">WIPM</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 12 2018 17:15:10 GMT+0700 (SE Asia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

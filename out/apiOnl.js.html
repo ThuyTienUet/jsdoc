@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: apiOnl.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: apiOnl.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview Module
+ */
+/**
+ * @module wi-online
+ */
+/**
+ * @param {} idUser
+ * @param {} password
+ * @implements Method: POST
+ * @implements Route: /login
+ * @implements Note: 
+ * @example {
+}
+ */
+function login(idUser, password) {}
+/**
+ * @param {} token
+ * @param {} file
+ * @param {} override
+ * @implements Method: POST
+ * @implements Route: /upload/lases
+ * @implements Note: override = true: override existing well if duplicate well
+override = null: create new well if duplicate well
+ * @example {
+}
+ */
+function upload_las_files(token, file, override) {}
+/**
+ * @param {} token
+ * @implements Method: POST
+ * @implements Route: /user/info
+ * @implements Note: 
+ * @example {
+	"token" : ""
+}
+ */
+function get_user_info(token) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/well/new
+ * @implements Note: 
+ * @example {
+}
+ */
+function create_new_well() {}
+/**
+ * @param {} token
+ * @param {} idWell
+ * @implements Method: POST
+ * @implements Route: /user/well/info
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idWell" : 1
+}
+ */
+function get_well_info(token, idWell) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/well/edit
+ * @implements Note: 
+ * @example {
+}
+ */
+function edit_an_existing_well() {}
+/**
+ * @param {} token
+ * @param {} idWell
+ * @implements Method: POST
+ * @implements Route: /user/well/delete
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idWell" : 1
+}
+ */
+function delete_the_well(token, idWell) {}
+/**
+ * @param {} token
+ * @param {} idWell
+ * @param {} file
+ * @implements Method: POST
+ * @implements Route: /user/well/addDatasets
+ * @implements Note: 
+ * @example {
+}
+ */
+function upload_files_and_import_dataset_into_existing_well(token, idWell, file) {}
+/**
+ * @param {} token
+ * @param {} datasets
+ * @param {} idWell
+ * @implements Method: POST
+ * @implements Route: /user/well/copyDatasets
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idWell" : 2, 
+	"datasets" : {
+		"0" : {
+			"idDataset" : 1, 
+			"name" : "02/97-DD-1X", 
+			"numberOfSample" : 0, 
+			"unit" : "M", 
+			"top" : 0, 
+			"bottom" : 0, 
+			"step" : 0, 
+			"createdAt" : "2017-11-29T09:14:50.000Z", 
+			"updatedAt" : "2017-11-29T09:14:50.000Z", 
+			"idWell" : 1
+		}
+	}
+}
+ */
+function copy_datasets_from_a_well_to_another(token, datasets, idWell) {}
+/**
+ * @param {} idWells
+ * @implements Method: POST
+ * @implements Route: /user/well/exportHeader
+ * @implements Note: 
+ * @example {
+	"idWells" : {
+		"0" : 1, 
+		"1" : 2, 
+		"2" : 3
+	}
+}
+ */
+function empty_array_for_all_wells(idWells) {}
+/**
+ * @param {} token
+ * @implements Method: POST
+ * @implements Route: /user/wells
+ * @implements Note: 
+ * @example {
+	"token" : ""
+}
+ */
+function get_wells_of_the_user(token) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/new
+ * @implements Note: 
+ * @example {
+}
+ */
+function create_new_dataset() {}
+/**
+ * @param {} token
+ * @param {} idDataset
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/info
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idDataset" : 1
+}
+ */
+function get_the_dataset_infomation(token, idDataset) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/edit
+ * @implements Note: 
+ * @example {
+}
+ */
+function edit_an_existing_dataset() {}
+/**
+ * @param {} token
+ * @param {} idDataset
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/detete
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idDataset" : 1
+}
+ */
+function delete_the_dataset(token, idDataset) {}
+/**
+ * @param {} token
+ * @param {} idWell
+ * @implements Method: POST
+ * @implements Route: /user/well/datasets
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idWell" : 1
+}
+ */
+function get_datasets_of_the_well(token, idWell) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/curve/new
+ * @implements Note: 
+ * @example {
+}
+ */
+function create_a_new_curve() {}
+/**
+ * @param {} token
+ * @param {} idCurve
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/curve/info
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idCurve" : 1
+}
+ */
+function get_curve_info(token, idCurve) {}
+/**
+ * @param {} token
+ * @param {} idCurve
+ * @param {} unit
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/curve/data
+ * @implements Note: response is a stream of data
+ * @example {
+	"token" : "", 
+	"idCurve" : 1, 
+	"unit" : "M"
+}
+ */
+function get_curve_data(token, idCurve, unit) {}
+/**
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/curve/edit
+ * @implements Note: 
+ * @example {
+}
+ */
+function edit_curve() {}
+/**
+ * @param {} token
+ * @param {} idCurve
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/curve/delete
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idCurve" : 1
+}
+ */
+function delete_curve(token, idCurve) {}
+/**
+ * @param {} token
+ * @param {} idDataset
+ * @implements Method: POST
+ * @implements Route: /user/well/dataset/curves
+ * @implements Note: 
+ * @example {
+	"token" : "", 
+	"idDataset" : 1
+}
+ */
+function get_curves_of_the_dataset(token, idDataset) {}
+/**
+ * @param {} token
+ * @param {} idObjs
+ * @implements Method: POST
+ * @implements Route: /export/las2
+ * @implements Note: 
+ * @example {
+	"token" : "aaa", 
+	"idObjs" : {
+		"0" : {
+			"idWell" : 2, 
+			"datasets" : {
+				"0" : {
+					"idDataset" : 2, 
+					"idCurves" : {
+						"0" : 1, 
+						"1" : 2
+					}
+				}
+			}
+		}
+	}
+}
+ */
+function export_well_to_las_2_file(token, idObjs) {}
+/**
+ * @param {} token
+ * @param {} idObjs
+ * @implements Method: POST
+ * @implements Route: /export/las3
+ * @implements Note: 
+ * @example {
+	"token" : "aaa", 
+	"idObjs" : {
+		"0" : {
+			"idWell" : 2, 
+			"datasets" : {
+				"0" : {
+					"idDataset" : 2, 
+					"idCurves" : {
+						"0" : 1, 
+						"1" : 2
+					}
+				}
+			}
+		}
+	}
+}
+ */
+function export_well_to_las_3_file(token, idObjs) {}
+/**
+ * @param {} token
+ * @param {} name
+ * @param {} idProject
+ * @implements Method: POST
+ * @implements Route: import/project/well
+ * @implements Note: 
+ * @example {
+	"token" : "aaa", 
+	"name" : "W4", 
+	"idProject" : 1
+}
+ */
+function import_a_well_from_project_to_inventory(token, name, idProject) {}
+/**
+ * @param {} token
+ * @param {} datasets
+ * @implements Method: POST
+ * @implements Route: import/project/dataset
+ * @implements Note: 
+ * @example {
+	"token" : "aaa", 
+	"datasets" : {
+		"0" : {
+			"idDataset" : 1, 
+			"idDesWell" : 357, 
+			"name" : "W40", 
+			"idWell" : 1
+		}
+	}
+}
+ */
+function import_a_dataset_from_project_to_inventory(token, datasets) {}
+/**
+ * @param {} token
+ * @param {} curves
+ * @implements Method: POST
+ * @implements Route: import/project/well
+ * @implements Note: 
+ * @example {
+	"token" : "aaa", 
+	"curves" : {
+		"0" : {
+			"idCurve" : 1, 
+			"name" : "DTCO3", 
+			"wellName" : "W4", 
+			"datasetName" : "W4", 
+			"idProject" : 1
+		}
+	}
+}
+ */
+function import_a_curve_from_project_to_inventory(token, curves) {}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-API%2520Authenticate.html">API Authenticate</a></li><li><a href="module-API%2520Communication.html">API Communication</a></li><li><a href="module-API%2520SOM.html">API SOM</a></li><li><a href="module-wi-online.html">wi-online</a></li><li><a href="module-WIPM.html">WIPM</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 12 2018 17:15:10 GMT+0700 (SE Asia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

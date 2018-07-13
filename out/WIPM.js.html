@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: WIPM.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: WIPM.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview Module
+ */
+/**
+ * @module WIPM
+ */
+/**
+ * @param {string} model_id
+ * @param {string} model_type
+ * @param {object} params
+ * @param {object} train
+ * @implements Method: POST
+ * @implements Route: /wipm/regression/model
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+Với neural network thay vì trả về loss sẽ trả về object error_path gồm 2 mảng validation_errors và train_error
+ * @example {
+	"model_id" : "reg", 
+	"model_type" : "NeuralNetwork", 
+	"params" : {
+		"hidden_layer_sizes" : {
+			"0" : 10, 
+			"1" : 10, 
+			"2" : 10
+ }, 
+		"solver" : "lbfgs", 
+		"max_iter" : 1000
+ }, 
+	"train" : {
+		"data" : {
+			"0" : {
+				"0" : 1.2, 
+				"1" : 2.3, 
+				"2" : 3
+ }, 
+			"1" : {
+				"0" : 2.6, 
+				"1" : 0.7, 
+				"2" : 1.3
+ }
+ }, 
+		"target" : {
+			"0" : 1.5, 
+			"1" : 0.7, 
+			"2" : 3.6
+		}
+	}
+}
+ */
+function Tạo_model_hồi_quy(model_id, model_type, params, train) {}
+/**
+ * @param {string} model_id
+ * @param {array_of_double_array} data
+ * @implements Method: POST
+ * @implements Route: /wipm/regression/predict
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+ * @example {
+	"model_id" : "preg", 
+	"data" : {
+		"0" : {
+			"0" : 1.2, 
+			"1" : 2.3, 
+			"2" : 3
+ }, 
+		"1" : {
+			"0" : 2.6, 
+			"1" : 0.7, 
+			"2" : 1.3
+		}
+	}
+}
+ */
+function Predict_bằng_model_hồi_quy(model_id, data) {}
+/**
+ * @param {string} model_id
+ * @param {string} model_type
+ * @param {object} params
+ * @param {object} train
+ * @implements Method: POST
+ * @implements Route: /wipm/classification/model
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+Với neural network thay vì trả về loss sẽ trả về object error_path gồm 2 mảng validation_errors và train_error
+ * @example {
+	"model_id" : "clf", 
+	"model_type" : "KNN", 
+	"params" : {
+		"num_neighbors" : 20, 
+		"p" : 1
+ }, 
+	"train" : {
+		"data" : {
+			"0" : {
+				"0" : 1.2, 
+				"1" : 2.3, 
+				"2" : 3
+ }, 
+			"1" : {
+				"0" : 2.6, 
+				"1" : 0.7, 
+				"2" : 1.3
+ }
+ }, 
+		"target" : {
+			"0" : 1, 
+			"1" : 0, 
+			"2" : 0
+		}
+	}
+}
+ */
+function Tạo_model_phân_loại(model_id, model_type, params, train) {}
+/**
+ * @param {string} model_id
+ * @param {array_of_double_array} data
+ * @implements Method: POST
+ * @implements Route: /wipm/classification/predict
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+ * @example {
+	"model_id" : "pclf", 
+	"data" : {
+		"0" : {
+			"0" : 1.2, 
+			"1" : 2.3, 
+			"2" : 3
+ }, 
+		"1" : {
+			"0" : 2.6, 
+			"1" : 0.7, 
+			"2" : 1.3
+		}
+	}
+}
+ */
+function Predict_bằng_model_phân_loại(model_id, data) {}
+/**
+ * @param {string} model_id
+ * @param {string} model_type
+ * @param {object} params
+ * @param {object} train
+ * @implements Method: POST
+ * @implements Route: /wipm/crp/model
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+ * @example {
+	"model_id" : "crp", 
+	"params" : {
+		"dim" : 1, 
+		"tau" : 2
+ }, 
+	"train" : {
+		"well" : {
+			"0" : "well1", 
+			"1" : "well2", 
+			"2" : "well3"
+ }, 
+		"data" : {
+			"0" : {
+				"0" : 2.1, 
+				"1" : 2.5, 
+				"2" : 3.1
+ }, 
+			"1" : {
+				"0" : 5.3, 
+				"1" : 0.1, 
+				"2" : 2.3
+ }
+ }, 
+		"target" : {
+			"0" : 1, 
+			"1" : 0, 
+			"2" : 1
+		}
+	}
+}
+ */
+function Tạo_model_bằng_phương_pháp_crp(model_id, model_type, params, train) {}
+/**
+ * @param {string} model_id
+ * @param {array_of_double_array} data
+ * @implements Method: POST
+ * @implements Route: /wipm/crp/predict
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+ * @example {
+	"model_id" : "pcrp", 
+	"data" : {
+		"0" : {
+			"0" : 2.1, 
+			"1" : 2.5, 
+			"2" : 3.1
+ }, 
+		"1" : {
+			"0" : 5.3, 
+			"1" : 0.1, 
+			"2" : 2.3
+		}
+	}
+}
+ */
+function Predict_bằng_phương_pháp_crp(model_id, data) {}
+/**
+ * @param {string} model_type
+ * @param {array_of_double_array} data
+ * @implements Method: POST
+ * @implements Route: /wipm/anfis/predict
+ * @implements Note: Nêu thành công: status = 200
+Nếu lỗi: status = 400, mesage chứa message của exception
+Số hàng trong data bắt buộc là 6
+ * @example {
+	"model_type" : "DecisionTree", 
+	"data" : {
+		"0" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"1" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"2" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"3" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"4" : {
+			"0" : 1, 
+			"1" : 2
+ }, 
+		"5" : {
+			"0" : 1, 
+			"1" : 2
+		}
+	}
+}
+ */
+function Predict_bằng_model_ANFIS(model_type, data) {}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-API%2520Authenticate.html">API Authenticate</a></li><li><a href="module-API%2520Communication.html">API Communication</a></li><li><a href="module-API%2520SOM.html">API SOM</a></li><li><a href="module-wi-online.html">wi-online</a></li><li><a href="module-WIPM.html">WIPM</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 12 2018 17:15:10 GMT+0700 (SE Asia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
